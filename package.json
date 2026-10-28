@@ -1,0 +1,14 @@
+{
+  "name": "ma-boutique-statique",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sources facultatives TypeScript et Sass pour la boutique statique",
+  "scripts": {
+    "build:ts": "tsc src/app.ts --target ES2020 --module ES2020 --outDir build",
+    "build:scss": "sass src/styles.scss build/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "typescript": "^5.5.0"
+  }
+}

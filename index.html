@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12372a">
+  <meta name="description" content="Boutique en ligne de démonstration, rapide et adaptée aux mobiles.">
+  <title>Ma Boutique — Catalogue en ligne</title>
+  <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Accueil de la boutique">
+      <img src="icons/logo.svg" alt="" width="42" height="42">
+      <span><strong>Ma Boutique</strong><small>Votre sélection, simplement.</small></span>
+    </a>
+    <button id="cart-button" class="cart-button" type="button" aria-label="Ouvrir le panier">
+      <span aria-hidden="true">🛒</span> Panier <span id="cart-count" class="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BOUTIQUE EN LIGNE</p>
+        <h1>Découvrez vos prochains favoris.</h1>
+        <p>Un catalogue simple, une recherche rapide et un panier sauvegardé sur votre appareil.</p>
+        <a class="primary-link" href="#catalogue">Voir le catalogue <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle"></div><div class="art-card"><span>✦</span><b>Votre style.<br>Votre choix.</b><small>COLLECTION</small></div>
+      </div>
+    </section>
+
+    <section id="catalogue" class="catalog-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">À DÉCOUVRIR</p><h2>Notre catalogue</h2></div>
+        <p id="product-count" class="muted">Chargement des produits…</p>
+      </div>
+      <div class="filters">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Rechercher un produit…" aria-label="Rechercher un produit"></label>
+        <label class="select-wrap"><span class="sr-only">Catégorie</span><select id="category-filter"><option value="all">Toutes les catégories</option></select></label>
+        <label class="select-wrap"><span class="sr-only">Trier les produits</span><select id="sort-filter"><option value="featured">En vedette</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option><option value="name">Nom A–Z</option></select></label>
+      </div>
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden><span>⌕</span><h3>Aucun produit trouvé</h3><p>Essayez un autre mot ou une autre catégorie.</p></div>
+    </section>
+
+    <section class="benefits">
+      <article><span>◇</span><h3>Simple à utiliser</h3><p>Une interface pensée pour les téléphones.</p></article>
+      <article><span>♡</span><h3>Panier sauvegardé</h3><p>Votre panier reste sur cet appareil grâce au stockage local.</p></article>
+      <article><span>↗</span><h3>Prêt pour GitHub Pages</h3><p>Site statique, sans serveur ni base de données.</p></article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="./"><img src="icons/logo.svg" alt="" width="34" height="34"><strong>Ma Boutique</strong></a>
+    <p>Démo à personnaliser. Remplacez les exemples par vos vrais produits.</p>
+    <p>© <span id="year"></span> Ma Boutique</p>
+  </footer>
+
+  <div id="cart-overlay" class="overlay" hidden>
+    <section class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="panel-heading"><div><p class="eyebrow">VOTRE SÉLECTION</p><h2 id="cart-title">Votre panier</h2></div><button id="close-cart" class="icon-button" type="button" aria-label="Fermer le panier">×</button></div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-bottom">
+        <div class="total-line"><span>Total estimé</span><strong id="cart-total">0,00 TND</strong></div>
+        <p class="fine-print">Démo uniquement : aucun paiement n'est effectué. Les prix sont des exemples modifiables.</p>
+        <button id="order-button" class="primary-button" type="button">Préparer le récapitulatif</button>
+        <button id="clear-cart" class="text-button" type="button">Vider le panier</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="order-overlay" class="overlay" hidden>
+    <section class="order-dialog" role="dialog" aria-modal="true" aria-labelledby="order-title">
+      <div class="panel-heading"><div><p class="eyebrow">ÉTAPE SUIVANTE</p><h2 id="order-title">Récapitulatif de commande</h2></div><button id="close-order" class="icon-button" type="button" aria-label="Fermer">×</button></div>
+      <p>Copiez ce récapitulatif pour l'envoyer au vendeur par le moyen de votre choix.</p>
+      <textarea id="order-summary" rows="8" readonly aria-label="Récapitulatif de commande"></textarea>
+      <p class="fine-print">Ce site ne transmet pas la commande automatiquement et ne traite aucun paiement. Configurez un service de commande sécurisé avant une utilisation commerciale.</p>
+      <button id="copy-order" class="primary-button" type="button">Copier le récapitulatif</button>
+      <p id="copy-status" class="status-message" role="status"></p>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "sac-01",
+    "name": "Sac essentiel",
+    "category": "Accessoires",
+    "price": 59.9,
+    "description": "Un compagnon élégant pour tous les jours.",
+    "image": "images/sac.svg",
+    "featured": 1
+  },
+  {
+    "id": "lampe-01",
+    "name": "Lampe minimaliste",
+    "category": "Maison",
+    "price": 89.0,
+    "description": "Une lumière douce pour votre espace.",
+    "image": "images/lampe.svg",
+    "featured": 1
+  },
+  {
+    "id": "ecouteurs-01",
+    "name": "Écouteurs sans fil",
+    "category": "Électronique",
+    "price": 119.0,
+    "description": "Un format compact pour vos déplacements.",
+    "image": "images/ecouteurs.svg",
+    "featured": 1
+  },
+  {
+    "id": "gourde-01",
+    "name": "Gourde réutilisable",
+    "category": "Accessoires",
+    "price": 29.9,
+    "description": "Une gourde pratique pour chaque journée.",
+    "image": "images/gourde.svg",
+    "featured": 0
+  },
+  {
+    "id": "carnet-01",
+    "name": "Carnet de notes",
+    "category": "Papeterie",
+    "price": 18.5,
+    "description": "Gardez vos idées et vos projets à portée de main.",
+    "image": "images/carnet.svg",
+    "featured": 0
+  },
+  {
+    "id": "plante-01",
+    "name": "Pot décoratif",
+    "category": "Maison",
+    "price": 35.0,
+    "description": "Une touche naturelle pour votre intérieur.",
+    "image": "images/plante.svg",
+    "featured": 0
+  },
+  {
+    "id": "montre-01",
+    "name": "Montre classique",
+    "category": "Accessoires",
+    "price": 149.0,
+    "description": "Un style discret et intemporel.",
+    "image": "images/montre.svg",
+    "featured": 0
+  },
+  {
+    "id": "support-01",
+    "name": "Support de téléphone",
+    "category": "Électronique",
+    "price": 24.0,
+    "description": "Gardez votre téléphone bien installé.",
+    "image": "images/support.svg",
+    "featured": 0
+  }
+]
